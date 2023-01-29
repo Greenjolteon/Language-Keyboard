@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>ⵥ̂θ̱ⵘ</title>
+        <title>ⵥ̂Θ̱ⵘ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Online keybaord to add the diacritic signs">
         <meta name="Keywords" content="diacritic, sign, keyboard">
@@ -28,6 +28,7 @@
         .center { text-align:center; }
         .as {display:inline-block; padding-bottom:1em; text-align:center; font-family:Arial, sans-serif;}
         .as p{ margin: 0.15em 0 0.15em 0;} 
+        .bs {display:inline-block; padding-bottom:1em; text-align:center; font-family:Arial, sans-serif; font-weight: bolder;}
         .span-red { color:#FF0000; }
         ul li {font-family: Arial, sans-serif; font-size: 1em;}
         #clock {font-size: 50px; width: 80%px; margin: 2px; text-align: center; color: #000000; border: 2px solid black; border-radius: 20px;}
@@ -147,8 +148,19 @@ function annuler() {
         </div>
         <textarea name="saisie" id="bar" rows="8" onkeyup="transcrire()" class="cadr"></textarea>
         <br>
-        <br>
-        <input type="button" class="bf" onclick="alpha(' ')" value="space"><input type="button" class="bf" onclick="conversion.saisie.rows=8;conversion.saisie.focus()" value="small frame"><input type="button" class="bf" onclick="conversion.saisie.rows=40;conversion.saisie.focus()" value="large frame">
+        <input type="button" class="bf" data-clipboard-action="copy" data-clipboard-target="#bar" value="copy">
+        <script>
+            var clipboard = new Clipboard('.bf');
+            clipboard.on('success', function(e) {
+            console.log(e); 
+            });
+            clipboard.on('error', function(e) {
+            console.log(e);
+            });
+        </script>
+        <input type="button" class="bf" onclick="alpha(' ')" value="space">
+        <input type="button" class="bf" onclick="conversion.saisie.rows=8;conversion.saisie.focus()" value="small frame">
+        <input type="button" class="bf" onclick="conversion.saisie.rows=40;conversion.saisie.focus()" value="large frame">
         <div class="espc"></div>
         <div class="border">
             <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᑎ')" value="ᑎ" title="a"></p></div>
@@ -188,6 +200,20 @@ function annuler() {
             <div class="as v"><p><input type="button" class="bt" onclick="alpha('̂')" value="̂" title="i (accent)"></p></div>
             <div class="as v"><p><input type="button" class="bt" onclick="alpha('̇')" value="̇" title="o (accent)"></p></div>
             <div class="as v"><p><input type="button" class="bt" onclick="alpha('́')" value="́" title="u (accent)"></p></div>
+        </div>
+        <br>
+        <div class="border">
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('⏼')" value="⏼" title="0"></p></div>
+            <div class="bs v"><p><input type="button" class="bt" onclick="alpha('𝍠')" value="𝍠" title="1"></p></div>
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍡')" value="𝍡" title="2"></p></div>
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍢')" value="𝍢" title="3"></p></div>
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍣')" value="𝍣" title="4"></p></div>
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍧')" value="𝍧" title="5"></p></div>
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍩')" value="𝍩" title="6"></p></div>
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍪')" value="𝍪" title="7"></p></div>
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍫')" value="𝍫" title="8"></p></div>
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍬')" value="𝍬" title="9"></p></div>
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('́')" value="́" title="Negative"></p></div>
         </div>
         </form>
         <hr>
