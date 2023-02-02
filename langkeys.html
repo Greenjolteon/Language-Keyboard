@@ -117,15 +117,15 @@ function annuler() {
         	let hour = time.getHours();
         	let min = time.getMinutes();
         	let sec = time.getSeconds();
-        	am_pm = "AM";
+        	am_pm = "ᑎⵆ";
         
         	if (hour > 12) {
         		hour -= 12;
-        		am_pm = "PM";
+        		am_pm = "Пⵆ";
         	}
         	if (hour == 0) {
         		hr = 12;
-        		am_pm = "AM";
+        		am_pm = "ᑎⵆ";
         	}
         
         	hour = hour < 10 ? "0" + hour : hour;
@@ -213,6 +213,7 @@ function annuler() {
             <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍪')" value="𝍪" title="7"></p></div>
             <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍫')" value="𝍫" title="8"></p></div>
             <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍬')" value="𝍬" title="9"></p></div>
+            <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍰')" value="𝍰" title="10"></p></div>
             <div class="as v"><p><input type="button" class="bt" onclick="alpha('́')" value="́" title="Negative"></p></div>
         </div>
         </form>
