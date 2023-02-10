@@ -143,10 +143,6 @@ function annuler() {
         </script>
         <br>
         <form name="conversion">
-        <div class="delc">
-        <br>
-        <input type="button" class="eff" value="Reset" name="Reset" title="clear" onclick="reset();conversion.saisie.focus()">
-        </div>
         <textarea name="saisie" id="bar" rows="8" onkeyup="transcrire()" class="cadr"></textarea>
         <br>
         <input type="button" class="bf" data-clipboard-action="copy" data-clipboard-target="#bar" value="copy">
@@ -159,6 +155,7 @@ function annuler() {
             console.log(e);
             });
         </script>
+        <input type="button" class="bf" value="reset" name="Reset" title="clear" onclick="reset();conversion.saisie.focus()">
         <input type="button" class="bf" onclick="conversion.saisie.rows=8;conversion.saisie.focus()" value="small frame">
         <input type="button" class="bf" onclick="conversion.saisie.rows=40;conversion.saisie.focus()" value="large frame">
         <div class="espc"></div>
@@ -193,71 +190,63 @@ function annuler() {
             <div class="as v"><p><input type="button" class="bt" onclick="alpha('ⵥ')" value="ⵥ" title="Ʒ"></p></div>
         </div>
         <br>
-        <div class="border">
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('̱')" value="̱" title="a (accent)"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('̄')" value="̄" title="æ (accent)"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('̉')" value="̉" title="e (accent)"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('̂')" value="̂" title="i (accent)"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('̇')" value="̇" title="o (accent)"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('́')" value="́" title="u (accent)"></p></div>
-            <div class="as v"><p><input type="button" id="space" onclick="alpha('  ')" value="space" title="space"></p></div>
-        </div>
-        <br>
-        <div class="border">
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᐤ')" value="ᐤ" title="0"></p></div>
-            <div class="bs v"><p><input type="button" class="bt" onclick="alpha('𝍠')" value="𝍠" title="1"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᘎ')" value="ᘎ" title="2"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᘓ')" value="ᘓ" title="3"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᓭ')" value="ᓭ" title="4"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᓱ')" value="ᓱ" title="5"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍩')" value="𝍩" title="6"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᒣ')" value="ᒣ" title="7"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᑭ')" value="ᑭ" title="8"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᑫ')" value="ᑫ" title="9"></p></div>
-            <div class="as v"><p><input type="button" class="bt" onclick="alpha('-')" value="-" title="Negative"></p></div>
+        <div class="flex">
+            <div class="border2">
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('̱')" value="̱" title="a (accent)"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('̄')" value="̄" title="æ (accent)"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('̉')" value="̉" title="e (accent)"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('̂')" value="̂" title="i (accent)"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('̇')" value="̇" title="o (accent)"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('́')" value="́" title="u (accent)"></p></div>
+                <div class="as v"><p><input type="button" id="space" onclick="alpha('  ')" value="space" title="space"></p></div>
+            </div>
+            <br>
+            <div class="border2">
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᐤ')" value="ᐤ" title="0"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍠')" value="𝍠" title="1"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᘎ')" value="ᘎ" title="2"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᘓ')" value="ᘓ" title="3"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᓭ')" value="ᓭ" title="4"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᓱ')" value="ᓱ" title="5"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('𝍩')" value="𝍩" title="6"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᒣ')" value="ᒣ" title="7"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᑭ')" value="ᑭ" title="8"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('ᑫ')" value="ᑫ" title="9"></p></div>
+                <div class="as v"><p><input type="button" class="bt" onclick="alpha('-')" value="-" title="Negative"></p></div>
+            </div>
         </div>
         </form>
         <hr>
-        <div class="border2">
-            <ul>
-                <li><a target="_blank" href="https://unicode-table.com/en/042D/"><strong>Э</strong></a>: U+024D (Cyrillic Capital Letter E)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/1561/"><strong>ᕡ</strong></a>: U+1561 (Canadian Syllabics N-Cree Thi)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/2571/"><strong>╱</strong></a>: U+2571 (Box Drawings Light Diagonal Upper Right To Lower Left)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/2D67/"><strong>ⵧ</strong></a>: U+2D67 (Tifinagh Letter Yo)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/0166/"><strong>Ŧ</strong></a>: U+0166 (Latin Capital Letter T with Stroke)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/039B/"><strong>Λ</strong></a>: U+039B (Greek Capital Letter Lamda)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/1425/"><strong>ᐥ</strong></a>: U+1425 (Canadian Syllabics Final Double Acute)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/30ED/"><strong>ロ</strong></a>: U+30ED (Katakana Letter Ro)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/00D8/"><strong>Ø</strong></a>: U+00D8 (Latin Capital Letter O with Stroke)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/043F/"><strong>П</strong></a>: U+043F (Cyrillic Capital Letter Pe)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/144E/"><strong>ᑎ</strong></a>: U+144E (Canadian Syllabics Ti)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/2D3D/"><strong>ⴽ</strong></a>: U+2D3D (Tifinagh Letter Yak)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/2D61/"><strong>ⵡ</strong></a>: U+2D61 (Tifinagh Letter Yaw)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/03D1/"><strong>ϑ</strong></a>: U+03D1 (Greek Theta Symbol)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/03C8/"><strong>Ψ</strong></a>: U+03C8 (Greek Capital Letter Psi)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/10B9/"><strong>Ⴙ</strong></a>: U+10B9 (Georgian Capital Letter Chin)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/221E/"><strong>∞</strong></a>: U+221E (Infinity)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/13DD/"><strong>Ꮭ</strong></a>: U+13DD (Cherokee Letter Tla)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/0398/"><strong>Θ</strong></a>: U+0398 (Greek Capital Letter Theta)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/2D63/"><strong>ⵣ</strong></a>: U+2D63 (Tifinagh Letter Yaz)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/2D65/"><strong>ⵥ</strong></a>: U+2D65 (Tifinagh Letter Yazz)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/0404/"><strong>Є</strong></a>: U+0404 (Cyrillic Capital Letter Ukrainian Ie)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/0295/"><strong>ʕ</strong></a>: U+0295 (Latin Letter Pharyngeal Voiced Fricative)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/0424/"><strong>Ф</strong></a>: U+0424 (Cyrillic Capital Letter Ef)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/2D58/"><strong>ⵘ</strong></a>: U+2D58 (Tifinagh Letter Yagh)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/2D46/"><strong>ⵆ</strong></a>: U+2D46 (Tifinagh Letter Yakh)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/13AE/"><strong>Ꭽ</strong></a>: U+13AE (Cherokee Letter Ha)</li>
-                <li><a target="_blank" href="https://unicode-table.com/en/040F/"><strong>Џ</strong></a>: U+040F (Cyrillic Capital Letter Dzhe)</li>
-            </ul>
+        <div class="border4">
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/042D/"><strong class="bigtext">Э</strong></a><p class="smalltext">U+042D</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/1561/"><strong class="bigtext">ᕡ</strong></a><p class="smalltext">U+1561</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/2571/"><strong class="bigtext">╱</strong></a><p class="smalltext">U+2571</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/2D67/"><strong class="bigtext">ⵧ</strong></a><p class="smalltext">U+2D67</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/0166/"><strong class="bigtext">Ŧ</strong></a><p class="smalltext">U+0166</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/039B/"><strong class="bigtext">Λ</strong></a><p class="smalltext">U+039B</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/1425/"><strong class="bigtext">ᐥ</strong></a><p class="smalltext">U+1425</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/30ED/"><strong class="bigtext">ロ</strong></a><p class="smalltext">U+30ED</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/00D8/"><strong class="bigtext">Ø</strong></a><p class="smalltext">U+00D8</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/043F/"><strong class="bigtext">П</strong></a><p class="smalltext">U+043F</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/144E/"><strong class="bigtext">ᑎ</strong></a><p class="smalltext">U+144E</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/2D3D/"><strong class="bigtext">ⴽ</strong></a><p class="smalltext">U+2D3D</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/2D61/"><strong class="bigtext">ⵡ</strong></a><p class="smalltext">U+2D61</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/03D1/"><strong class="bigtext">ϑ</strong></a><p class="smalltext">U+03D1</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/03C8/"><strong class="bigtext">Ψ</strong></a><p class="smalltext">U+03C8</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/10B9/"><strong class="bigtext">Ⴙ</strong></a><p class="smalltext">U+10B9</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/221E/"><strong class="bigtext">∞</strong></a><p class="smalltext">U+221E</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/13DD/"><strong class="bigtext">Ꮭ</strong></a><p class="smalltext">U+13DD</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/0398/"><strong class="bigtext">Θ</strong></a><p class="smalltext">U+0398</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/2D63/"><strong class="bigtext">ⵣ</strong></a><p class="smalltext">U+2D63</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/2D65/"><strong class="bigtext">ⵥ</strong></a><p class="smalltext">U+2D65</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/0404/"><strong class="bigtext">Є</strong></a><p class="smalltext">U+0404</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/0295/"><strong class="bigtext">ʕ</strong></a><p class="smalltext">U+0295</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/0424/"><strong class="bigtext">Ф</strong></a><p class="smalltext">U+0424</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/2D58/"><strong class="bigtext">ⵆ</strong></a><p class="smalltext">U+2D58</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/2D46/"><strong class="bigtext">ⵘ</strong></a><p class="smalltext">U+2D46</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/13AE/"><strong class="bigtext">Ꭽ</strong></a><p class="smalltext">U+13AE</p></div>
+            <div class="unicbox"><a target="_blank" href="https://unicode-table.com/en/040F/"><strong class="bigtext">ⵖ</strong></a><p class="smalltext">U+040F</p></div>
             <hr>
-            <ul>
-                <li><a class="link" target="_blank" href="https://unicode-table.com/en/0331/"><strong> ̱ </strong></a>: U+0331 (Combining Macron Below)</li>
-                <li><a class="link" target="_blank" href="https://unicode-table.com/en/0304/"><strong> ̄ </strong></a>: U+0304 (Combining Macron)</li>
-                <li><a class="link" target="_blank" href="https://unicode-table.com/en/0309/"><strong> ̉ </strong></a>: U+0309 (Combining Hook Above)</li>
-                <li><a class="link" target="_blank" href="https://unicode-table.com/en/0302/"><strong> ̂ </strong></a>: U+0302 (Combining Circumflex Accent)</li>
-                <li><a class="link" target="_blank" href="https://unicode-table.com/en/0307/"><strong> ̇ </strong></a>: U+0307 (Combining Dot Above)</li>
-                <li><a class="link" target="_blank" href="https://unicode-table.com/en/0301/"><strong> ́ </strong></a>: U+0301 (Combining Acute Accent)</li>
-            </ul>
         </div>
         </div>
     </body>
