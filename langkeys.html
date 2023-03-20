@@ -84,7 +84,6 @@ function annuler() {
         </noscript>
         <br>
         <div id="clock">8:10:45</div>
-
         <script>
         setInterval(showTime, 1000);
         function showTime() {
@@ -92,23 +91,13 @@ function annuler() {
         	let hour = time.getHours();
         	let min = time.getMinutes();
         	let sec = time.getSeconds();
-        	am_pm = "ᑎⵆ";
-        
-        	if (hour > 12) {
-        		hour -= 12;
-        		am_pm = "Пⵆ";
-        	}
-        	if (hour == 0) {
-        		hr = 12;
-        		am_pm = "ᑎⵆ";
-        	}
         
         	hour = hour < 10 ? "0" + hour : hour;
         	min = min < 10 ? "0" + min : min;
         	sec = sec < 10 ? "0" + sec : sec;
         
         	let currentTime = hour + ":"
-        		+ min + ":" + sec + am_pm;
+        		+ min + ":" + sec;
         
         	document.getElementById("clock")
         		.innerHTML = currentTime;
