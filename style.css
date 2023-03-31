@@ -4,7 +4,7 @@
 body {color:#330066; background:#FFFFFF; font-family:Roboto; font-size:12pt; }
 .border {border: 2.5px solid black; width:84%; margin-left: 120px; margin-right: 120px;}
 .border2 {border: 2.5px solid black; width: 40%; text-align: center; margin-left: 135px;}
-.border4 {border: 2.5px solid black; width: 82%; margin-left: 120px; margin-right: 120px;}
+.border4 {border: 2.5px solid black; width: 80%; margin-left: 120px; margin-right: 120px;}
 p { margin:0.6em 0 0.6em 0; }
 .espc { clear:both; height:1em; }
 a { color:#330066; text-decoration:underline; }
