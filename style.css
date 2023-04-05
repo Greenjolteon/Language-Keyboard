@@ -27,6 +27,6 @@ ul li {font-family: Roboto; font-size: 1em;}
 .bigtext {font-size: 25px; text-align: center; text-decoration: none;}
 .smalltext {font-size: 10px; color: #808080;}
 .flex {margin-right: 135px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;}
-#red-button {width: 5%; height: 5%; float: right;}
+#redbutton {width: 5%; height: 5%; float: right;}
 @media screen and (max-width:720px) { 
     .delc { position:absolute; left:0%; }
